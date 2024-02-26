@@ -1,0 +1,107 @@
+\usepackage[english,russian]{babel} 
+
+\usepackage{cmap} 
+\usepackage[T2A]{fontenc} 
+\usepackage[utf8]{inputenc} 
+
+\usepackage[14pt]{extsizes} 
+
+
+
+\usepackage{geometry}
+\geometry{left=30mm}
+\geometry{right=15mm}
+\geometry{top=20mm}
+\geometry{bottom=20mm}
+\setlength{\parindent}{1.5cm}
+
+\newcommand{\centerchapter}[1]{\titleformat{\chapter}{\filcenter\bfseries\Large}{\thechapter}{20pt}{}\addcontentsline{toc}{chapter}{#1}\chapter*{#1}}
+\newcommand{\averchapter}[1]{\titleformat{\chapter}{\large\bfseries\LARGE}{\thechapter}{20pt}{}\chapter{#1}}
+
+\usepackage{titlesec}
+
+\titleformat{\section}{\normalsize\bfseries}
+{\thesection}{1em}{}
+
+\titlespacing*{\chapter}{0pt}{-30pt}{8pt}
+\titlespacing*{\section}{\parindent}{*4}{*4}
+\titlespacing*{\subsection}{\parindent}{*4}{*4}
+
+\usepackage{titlesec}
+\titleformat{\chapter}{\LARGE\bfseries}{\thechapter}{20pt}{\LARGE\bfseries}
+\titleformat{\section}{\Large\bfseries}{\thesection}{20pt}{\Large\bfseries}
+
+
+
+\usepackage{setspace}
+\onehalfspacing 
+
+
+\frenchspacing
+\usepackage{indentfirst}
+
+
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstset{ %
+	language=python,   					
+	basicstyle=\small\sffamily,			
+	numbers=left,						
+	%numberstyle=,					
+	stepnumber=1,						
+	numbersep=5pt,						
+	frame=single,						
+	tabsize=4,							
+	captionpos=t,						
+	breaklines=true,					
+	breakatwhitespace=true,				
+	escapeinside={\#*}{*)},				
+	backgroundcolor=\color{white},
+}
+
+
+% PDF
+\usepackage[justification=centering]{caption} 
+\usepackage[unicode,pdftex]{hyperref} 
+\hypersetup{hidelinks}
+
+
+
+% Подписи
+\captionsetup{labelsep=endash} 
+
+% Таблицы
+\usepackage{threeparttable}
+
+% Рисунки
+\usepackage{caption}
+\captionsetup[figure]{name={Рисунок}} 
+
+\usepackage{float}
+\usepackage[justification=centering]{caption}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+\usepackage{graphicx}
+\newcommand{\img}[3] {
+    \begin{figure}[h]
+        \center{\includegraphics[height=#1]{assets/img/#2}}
+        \caption{#3}
+        \label{img:#2}
+    \end{figure}
+}
+\newcommand{\boximg}[3] {
+    \begin{figure}[h]
+        \center{\fbox{\includegraphics[height=#1]{assets/img/#2}}}
+        \caption{#3}
+        \label{img:#2}
+    \end{figure}
+}
+
+
+% Формулы
+\usepackage{amsmath}
+\newcommand{\code}[1]{\texttt{#1}} 

@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background: rgb(0, 0, 0)</string>
+   </property>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>199</x>
+      <y>0</y>
+      <width>1201</width>
+      <height>850</height>
+     </rect>
+    </property>
+    <widget class="QGraphicsView" name="graphicsView">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>0</y>
+       <width>1201</width>
+       <height>800</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>9</y>
+      <width>221</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #E0E0E0, stop: 1 #FFFFFF);
+     border: 2px solid rgb(0, 255, 128);
+     border-radius: 5px;
+     margin-top: 0ex; /* оставляем пространство вверху для заголовка */
+ }
+
+ QGroupBox::title {
+     subcontrol-origin: margin;
+     subcontrol-position: top center; /* помещаем вверху по центру */
+     padding: 0 3px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #FFOECE, stop: 1 #FFFFFF);
+ }</string>
+    </property>
+    <property name="title">
+     <string>Анимация</string>
+    </property>
+    <widget class="QPushButton" name="stop">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>61</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	padding: 0 15px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #7952b3;  
+	border-radius: 5px;
+	height: 38px;
+	line-height: 38px;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #fff;
+	background-color: #3D9140;
+}
+QPushButton:flat {
+    border: true; 
+}
+QPushButton:pressed {
+	background-color: #61428f;
+	border-color: #61428f;
+}
+QPushButton:disabled {
+	opacity: 0.65;
+}</string>
+     </property>
+     <property name="text">
+      <string>❚❚</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="start">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>30</y>
+       <width>61</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	padding: 0 15px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #7952b3;  
+	border-radius: 5px;
+	height: 38px;
+	line-height: 38px;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #fff;
+	background-color: #3D9140;
+}
+QPushButton:flat {
+    border: true; 
+}
+QPushButton:pressed {
+	background-color: #61428f;
+	border-color: #61428f;
+}
+QPushButton:disabled {
+	opacity: 0.65;
+}</string>
+     </property>
+     <property name="text">
+      <string>▶</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="full_end">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>30</y>
+       <width>61</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	padding: 0 15px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #7952b3;  
+	border-radius: 5px;
+	height: 38px;
+	line-height: 38px;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #fff;
+	background-color: #3D9140;
+}
+QPushButton:flat {
+    border: true; 
+}
+QPushButton:pressed {
+	background-color: #61428f;
+	border-color: #61428f;
+}
+QPushButton:disabled {
+	opacity: 0.65;
+}</string>
+     </property>
+     <property name="text">
+      <string>■</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>30</y>
+       <width>71</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	padding: 0 15px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #7952b3;  
+	border-radius: 5px;
+	height: 38px;
+	line-height: 38px;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #fff;
+	background-color: #3D9140;
+}
+QPushButton:flat {
+    border: true; 
+}
+QPushButton:pressed {
+	background-color: #61428f;
+	border-color: #61428f;
+}
+QPushButton:disabled {
+	opacity: 0.65;
+}</string>
+     </property>
+     <property name="text">
+      <string>▶▶</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>221</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #E0E0E0, stop: 1 #FFFFFF);
+     border: 2px solid rgb(0, 255, 128);
+     border-radius: 5px;
+     margin-top: 0ex; /* оставляем пространство вверху для заголовка */
+ }
+
+ QGroupBox::title {
+     subcontrol-origin: margin;
+     subcontrol-position: top center; /* помещаем вверху по центру */
+     padding: 0 3px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #FFOECE, stop: 1 #FFFFFF);
+ }</string>
+    </property>
+    <property name="title">
+     <string>Масштаб</string>
+    </property>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>101</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	padding: 0 15px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #7952b3;  
+	border-radius: 5px;
+	height: 38px;
+	line-height: 38px;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #fff;
+	background-color: #3D9140;
+}
+QPushButton:flat {
+    border: true; 
+}
+QPushButton:pressed {
+	background-color: #61428f;
+	border-color: #61428f;
+}
+QPushButton:disabled {
+	opacity: 0.65;
+}</string>
+     </property>
+     <property name="text">
+      <string>+</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>20</y>
+       <width>101</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	padding: 0 15px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #7952b3;  
+	border-radius: 5px;
+	height: 38px;
+	line-height: 38px;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #fff;
+	background-color: #3D9140;
+}
+QPushButton:flat {
+    border: true; 
+}
+QPushButton:pressed {
+	background-color: #61428f;
+	border-color: #61428f;
+}
+QPushButton:disabled {
+	opacity: 0.65;
+}</string>
+     </property>
+     <property name="text">
+      <string>-</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>241</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	padding: 0 15px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #7952b3;  
+	border-radius: 5px;
+	height: 38px;
+	line-height: 38px;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #fff;
+	background-color: #3D9140;
+}
+QPushButton:flat {
+    border: true; 
+}
+QPushButton:pressed {
+	background-color: #61428f;
+	border-color: #61428f;
+}
+QPushButton:disabled {
+	opacity: 0.65;
+}</string>
+    </property>
+    <property name="text">
+     <string>Выход</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Функции</string>
+    </property>
+    <widget class="QMenu" name="menu_2">
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Загрузить</string>
+     </property>
+     <addaction name="action_2"/>
+     <addaction name="action"/>
+    </widget>
+    <addaction name="menu_2"/>
+    <addaction name="action_3"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_2">
+   <property name="icon">
+    <iconset theme="applications-system"/>
+   </property>
+   <property name="text">
+    <string>Солнечную систему</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>Систему с одной планетой</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>Информация</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
