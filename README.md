@@ -1,2 +1,2 @@
 # cg_cursework
-Cursework on computer graphics
+сomputer graphics Сursework on Qt
