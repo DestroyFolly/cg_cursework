@@ -1,4 +1,4 @@
 # cg_cursework
 сomputer graphics Сursework on Qt
 
-Theme: simulation of the motion of the planets of the solar system
+Theme: movement visualization of the solar system planets
